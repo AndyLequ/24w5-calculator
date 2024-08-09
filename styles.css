@@ -1,9 +1,28 @@
 body {
     background-color: #E2FCEF;
+    
+}
+
+#myVideo {
+    z-index: -1;
+    position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        opacity: 0.6;
+}
+
+#myVideo:hover {
+    opacity: 1;
+}
+
+#history {
+    height: 200px;
 }
 
 .calculator {
-    width: 250px;
+    width: 400px;
     margin: 50px auto;
     text-align: center;
     border: 1px solid black;
@@ -11,6 +30,18 @@ body {
     padding: 10px;
     background-image: url("Cumulonimbus Cloud.jpg");
     background-size: 300px 450px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    opacity: 0.5;
+}
+
+.calculator:hover {
+    opacity: 1.0;
+    box-shadow: 5px 5px 5px #5f4ebe;
+}
+
+.bottom-area{
+    display: flex;
 }
 
 #display {
@@ -64,3 +95,4 @@ body {
     background-color: #9DA9A0;
     box-shadow: 3px 4px 5px #654C4F;
 }
+

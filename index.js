@@ -1,7 +1,9 @@
 // Get elements
 const display = document.getElementById('display');
 const buttons = document.querySelectorAll('.buttons button');
+const history = document.getElementById('history')
 let currentOperator = null;
+
 
 // Add event listeners
 buttons.forEach(button => {
@@ -52,6 +54,7 @@ function calculate() {
         }
         const result = eval(display.value);
         display.value = result;
+        addToHistory(result)
         currentOperator = null; // Clear the current operator after calculation
     } catch (error) {
         display.value = 'Error';
@@ -77,3 +80,8 @@ document.getElementById('plusButton').addEventListener('click', () => handleOper
 document.getElementById('minusButton').addEventListener('click', () => handleOperatorClick('-'));
 document.getElementById('multiplyButton').addEventListener('click', () => handleOperatorClick('*'));
 document.getElementById('divideButton').addEventListener('click', () => handleOperatorClick('/'));
+
+function addToHistory(){
+    history.value += display.value + ' \n'
+    
+}
